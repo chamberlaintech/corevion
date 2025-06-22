@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Technology.css";
 import PulseRing from "../PulseRing/PulseRing";
-import shell from "../../assets/shell.png";
+import shell from "../../assets/Shell.png";
 import stabilizer from "../../assets/stabilizer.png";
 
 const Technology = () => {
