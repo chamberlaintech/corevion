@@ -1,0 +1,47 @@
+.comparison {
+    width: 100%;
+    flex-direction: column;
+}
+
+.comparison-heading {
+    margin-bottom: 3rem;
+}
+
+.comparison-heading h2 {
+    margin-bottom: 2rem;
+}
+
+.comparison-content {
+    flex-direction: row;
+    gap: 2rem;
+    width: 100%;
+}
+
+@media screen and (max-width: 900px) {
+    .comparison-heading {
+        margin-bottom: 2rem;
+    }
+
+    .comparison-heading h2 {
+        margin-bottom: 1.5rem;
+    }
+
+    .comparison-content {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .comparison-heading {
+        margin-bottom: 1.75rem;
+    }
+
+    .comparison-heading h2 {
+        margin-bottom: 1.25rem;
+    }
+
+    .comparison-content {
+        gap: 1rem;
+    }
+}

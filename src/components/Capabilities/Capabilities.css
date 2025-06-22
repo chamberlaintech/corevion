@@ -1,0 +1,45 @@
+.capabilities {
+    width: 100%;
+    flex-direction: column;
+}
+
+.capabilities-heading {
+    margin-bottom: 3rem;
+}
+
+.capabilities-heading h2 {
+    margin-bottom: 2rem;
+}
+
+.capabilities-content {
+    flex-direction: column;
+    gap: 2rem;
+}
+
+@media screen and (max-width: 900px) {
+    .capabilities-heading {
+        margin-bottom: 2rem;
+    }
+
+    .capabilities-heading h2 {
+        margin-bottom: 1.5rem;
+    }
+
+    .capabilities-content {
+        gap: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .capabilities-heading {
+        margin-bottom: 1.75rem;
+    }
+    
+    .capabilities-heading h2 {
+        margin-bottom: 1.25rem;
+    }
+
+    .capabilities-content {
+        gap: 1rem;
+    }
+}

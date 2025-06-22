@@ -1,0 +1,46 @@
+.store {
+    flex-direction: column;
+    width: 100%;
+}
+
+.store-heading {
+    margin-bottom: 3rem;
+}
+
+.store-heading h2 {
+    margin-bottom: 2rem;
+}
+
+.store-content {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+@media screen and (max-width: 900px) {
+    .store-heading {
+        margin-bottom: 2rem;
+    }
+
+    .store-heading h2 {
+        margin-bottom: 1.5rem;
+    }
+
+    .store-content {
+        gap: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .store-heading {
+        margin-bottom: 1.75rem;
+    }
+
+    .store-heading h2 {
+        margin-bottom: 1.25rem;
+    }
+
+    .store-content {
+        gap: 1.5rem;
+    }
+}

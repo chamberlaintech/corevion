@@ -1,0 +1,50 @@
+.cap-card {
+    display: flex;
+    padding: 2rem;
+    border-radius: var(--borderRadius);
+    width: 80%;
+}
+
+.content-icon {
+    margin-bottom: 1.25rem;
+}
+
+.icon {
+    font-size: 2.5rem;
+}
+
+.content-text h5 {
+    margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 900px) {
+    .content-icon {
+        margin-bottom: 1rem;
+    }
+
+    .icon {
+        font-size: 2.25rem;
+    }
+
+    .content-text h5 {
+        margin-bottom: 0.75rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .cap-card {
+        width: 100%;
+    }
+
+    .content-icon {
+        margin-bottom: 0.75rem;
+    }
+
+    .icon {
+        font-size: 2rem;
+    }
+
+    .content-text h5 {
+        margin-bottom: 0.5rem;
+    }
+}

@@ -1,0 +1,71 @@
+.corevion-card {
+    max-width: 500px;
+    width: 100%;
+    padding: 2rem;
+    background-color: var(--purpleColor);
+    border-radius: var(--borderRadius);
+    color: white;
+    border: 2px solid var(--purpleColorBorderLight);
+    box-shadow: var(--cardShadowPurpleStrong);
+}
+
+.corevion-card h6 {
+    margin-bottom: 1.5rem;
+}
+
+.corevion-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.corevion-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.corevion-left {
+    text-align: left;
+}
+
+.corevion-right {
+    display: flex;
+    text-align: right;;
+}
+
+
+.corevion-card-divider {
+    width: 100%;
+    height: 1px;
+    background-color: var(--purpleColorBorderLight);
+}
+
+@media screen and (max-width: 900px) {
+    .corevion-card {
+        padding: 1.5rem;
+    }
+
+    .corevion-item {
+        gap: 1.5rem;
+    }
+
+
+}
+
+@media screen and (max-width: 600px) {
+    .corevion-card {
+        padding: 1rem;
+    }
+
+    .corevion-card h6 {
+        margin-bottom: 1rem;
+    }
+
+    .corevion-item {
+        gap: 1rem;
+    }
+    
+}

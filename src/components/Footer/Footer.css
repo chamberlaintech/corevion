@@ -1,0 +1,138 @@
+.footer {
+    width: 100%;
+    border-top: 1px solid var(--dividerColor);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-left {
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.footer-left-img {
+    width: 6.25rem;
+}
+
+.footer-left-img img {
+    width: 100%;
+}
+
+.footer-left-text {
+    flex-direction: row;
+    gap: 0.5rem;
+}
+
+.text-green {
+    color: var(--greenColor);
+}
+
+.circle-green {
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: var(--greenColor);
+    border-radius: 100rem;
+    animation: blink 1.8s ease-in-out infinite; 
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+.footer-center-terminal {
+    width: 20rem;
+    height: 4rem;
+    border-radius: 0.5rem;
+    background-color: var(--secondaryBgColor);
+    padding: 0.75rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: var(--terminalShadow);
+}
+
+
+.underline {
+    animation: blink 1s ease-in-out infinite;
+}
+
+.footer-right {
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.footer-right-links ul li {
+    margin: 0.75rem 0;
+}
+
+.footer-right-links ul li:hover {
+    color: white;
+}
+
+.footer-right-bottom {
+    gap: 0.75rem;
+    flex-direction: column;
+}
+
+.footer-right-bottom-logos {
+    gap: 0.75rem;
+}
+
+.footer-right-bottom-logos svg {
+    color: var(--lightGrayColor);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.footer-right-bottom-logos svg:hover {
+    color: white;
+}
+
+.footer-right-bottom-text p {
+    color: var(--lightGrayColor);
+}
+
+.guest-text {
+    color: var(--pinkColor);
+}
+
+@media screen and (max-width: 1150px) {
+    .footer {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+}
+
+@media screen and (max-width: 900px) {
+
+}
+
+@media screen and (max-width: 600px) {
+    .footer {
+        gap: 1.5rem;
+    }
+
+    .footer-left {
+        gap: 0.75rem;
+    }
+
+    .footer-right {
+        gap: 1rem;
+    }
+
+    .footer-right-bottom {
+        gap: 0.5rem;
+    }
+}

@@ -1,0 +1,33 @@
+.error {
+    width: 100%;
+    flex-direction: column;
+}
+
+.error-heading {
+    margin-bottom: 3rem;
+}
+
+.error-heading h2 {
+    margin-bottom: 2rem;
+    text-shadow: var(--errorGlow);
+}
+
+@media screen and (max-width: 900px) {
+    .error-heading {
+        margin-bottom: 2rem;
+    }
+
+    .error-heading h2 {
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .error-heading {
+        margin-bottom: 1.75rem;
+    }
+
+    .error-heading h2 {
+        margin-bottom: 1.25rem;
+    }
+}

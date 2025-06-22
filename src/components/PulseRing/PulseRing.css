@@ -1,0 +1,64 @@
+.pulse-wrapper {
+    width: 420px;
+    height: 420px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pulse-svg circle {
+    fill: var(--cyanColor);
+    animation: pulse-ring 2.5s ease-in-out infinite;
+    transform-origin: center;
+}
+
+.pulse-ring-1 {
+    animation-delay: 0s;
+}
+
+.pulse-ring-2 {
+    animation-delay: 0.3s;
+}
+
+.pulse-ring-3 {
+    animation-delay: 0.6s;
+}
+
+.pulse-ring-4 {
+    animation-delay: 0.9s;
+}
+
+.pulse-ring-5 {
+    animation-delay: 1.2s;
+}
+
+@keyframes pulse-ring {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+
+    50% {
+        transform: scale(1.05);
+        opacity: 0.3;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .pulse-wrapper {
+        width: 380px;
+        height: 380px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .pulse-wrapper {
+        width: 340px;
+        height: 340px;
+    }
+}

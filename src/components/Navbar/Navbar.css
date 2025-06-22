@@ -1,0 +1,228 @@
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.navbar-logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.navbar-logo img {
+    width: 70px;
+    cursor: pointer;
+}
+
+.navbar-links {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-links li {
+    margin: 0 1.5rem;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+    ;
+}
+
+.navbar-links li:hover {
+    color: white;
+    transform: scale(1.1);
+    font-weight: 700;
+}
+
+.navbar-links li::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0%;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+.navbar-links li:hover::after {
+    width: 100%;
+}
+.navbar-links li .active {
+    font-weight: 700;
+    color: white;
+    transform: scale(1.1)
+}
+
+.nav-links li .active::after {
+    width: 100%;
+    background-color: white;
+}
+
+
+.navbar-smallscreen {
+    display: none;
+}
+
+.overlay-open {
+    color: var(--lightGrayColor);
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.overlay-open:hover {
+    color: var(--purpleColor);
+}
+
+.navbar-smallscreen-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--primaryBgColor);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 5;
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.navbar-smallscreen-overlay.slide-bottom {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.overlay-close {
+    font-size: 1.75rem;
+    color: var(--lightGrayColor);
+    cursor: pointer;
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.overlay-close:hover {
+    color: var(--purpleColor);
+}
+
+.navbar-smallscreen-links li {
+    margin: 1.5rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    text-align: center;
+    color: var(--lightGrayColor);
+    opacity: 0;
+    animation: slide-in 0.5s ease forwards;
+}
+
+.navbar-smallscreen-links li:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.navbar-smallscreen-links li:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.navbar-smallscreen-links li:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.navbar-smallscreen-links li:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+.navbar-smallscreen-links li:hover {
+    color: var(--purpleColor);
+}
+
+.cart-icon {
+    color: var(--lightGrayColor);
+    transition: color 0.3s ease;
+}
+
+.cart-icon .active {
+    color: white !important;
+}
+
+.mobile-cart.active .cart-icon {
+    color: white !important;
+}
+
+.desktop-cart .active .cart-icon {
+    color: white !important;
+}
+
+.navbar-cart.active .cart-icon {
+    color: white !important;
+}
+
+.cart-badge {
+    position: absolute;
+    font-family: var(--primaryText);
+    top: -8px;
+    right: -10px;
+    background: var(--purpleColor);
+    color: white;
+    border-radius: 50%;
+    padding: 2px 7px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    min-width: 20;
+    text-align: center;
+}
+
+@keyframes slide-in {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .navbar button {
+        display: none;
+    }
+
+    .navbar-links {
+        display: none;
+    }
+
+    .navbar-smallscreen {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .desktop-cart {
+        display: none !important;
+    }
+
+    .mobile-cart {
+        display: inline-block !important;
+        margin-right: 0.5rem;
+        vertical-align: middle;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .navbar {
+        padding: 1rem;
+    }
+
+    
+}
+

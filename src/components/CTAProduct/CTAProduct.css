@@ -1,0 +1,89 @@
+.ctaproduct {
+    width: 100%;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+}
+
+.ctaproduct-heading {
+    margin-bottom: 1.5rem;
+}
+
+.ctaproduct-heading h2 {
+    margin-bottom: 2rem;
+}
+
+
+.ctaproduct-swiper {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.ctaproduct .swiper-slide {
+    display: flex;
+    justify-content: center;
+}
+
+
+.ctaproduct-buttons {
+    margin-top: 1.5rem;
+    gap: 1.5rem;
+}
+
+.ctaproduct-buttons button {
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    color: var(--purpleColor);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.ctaproduct-buttons button:hover {
+    color: white;
+}
+
+
+
+@media screen and (min-width: 1350px) {
+    .ctaproduct-buttons {
+        display: none !important;
+    }
+}
+
+
+@media screen and (max-width: 900px) {
+    .ctaproduct-heading {
+        margin-bottom: 0.5rem;
+    }
+
+    .ctaproduct-heading h2 {
+        margin-bottom: 1.5rem;
+    }
+
+    .cta-product-swiper {
+        margin-bottom: 1rem;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .ctaproduct-heading {
+        margin-bottom: 0.5rem;
+    }
+
+    .ctaproduct-heading h2 {
+        margin-bottom: 1.25rem;
+    }
+
+    .ctaproduct-swiper {
+        margin-bottom: 0.5rem;
+    }
+}

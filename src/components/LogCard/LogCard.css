@@ -1,0 +1,89 @@
+.logcard {
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1.5rem 2rem;
+    border: 1px solid var(--cyanColorBorder);
+    border-radius: var(--borderRadius);
+    box-shadow: var(--cardShadowCyan);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    background-color: var(--secondaryBgColor);
+    width: 100%;
+}
+
+.logcard:hover {
+    box-shadow: var(--cardShadowCyanHover);
+    transform: scale(1.05);
+} 
+
+.logcard-heading p {
+    margin-bottom: 0.5rem;
+    color: var(--lightGrayColor);
+}
+
+.logcard-heading h6 {
+    color: var(--cyanColor);
+}
+
+.logcard-heading {
+    margin-bottom: 1rem;
+}
+
+.logcard-text {
+    margin-bottom: 0.75rem;
+}
+
+.log-button {
+    display: inline-block;
+    color: white;
+    font-family: var(--secondaryText);
+    font-size: 0.875rem;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    animation: pulseStatus 1.5s infinite;
+}
+
+.stable-pulse {
+    background-color: var(--greenColor);
+}
+
+.alert-pulse {
+    background-color: var(--redColor);
+}
+
+.testing-pulse {
+    background-color: var(--orangeColor);
+}
+
+.redacted-pulse {
+    background-color: var(--dividerColor);
+}
+
+@keyframes pulseStatus {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .logcard {
+        padding: 1.25rem 1.5rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .logcard {
+        padding: 1rem 1.25rem;
+    }
+}

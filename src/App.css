@@ -1,0 +1,449 @@
+:root {
+  --primaryText: "Orbitron", sans-serif;
+  --secondaryText: "Space Grotesk", sans-serif;
+  --tertiaryText: "IBM Plex Mono", monospace;
+  --primaryBgColor: #020C17;
+  --secondaryBgColor: #0E1A25;
+  --dividerColor: #272B53;
+  --lightGrayColor: #C3C4CD;
+  --pinkColor: #F739F1;
+  --pinkColorHover: #D126D7;
+  --pinkColorBorder: rgba(247, 57, 241, 0.3);
+  --purpleColor: #7329CE;
+  --purpleColorHover: #5F21AA;
+  --purpleColorBorder: rgba(115, 41, 206, 0.3);
+  --purpleColorBorderLight: #AF6EFF;
+  --cyanColor: #49E1F8;
+  --cyanColorHover: #2FC4DC;
+  --cyanColorBorder: rgba(73, 225, 248, 0.3);
+  --greenColor: #0CBF55;
+  --greenColorHover: #0A9E47;
+  --greenColorBorder: rgba(12, 191, 85, 0.3);
+  --orangeColor: #F67637;
+  --yellowColor: #F3DC2E;
+  --redColor: #EF1619;
+  --linearBorderColor: linear-gradient(90deg, #49E1F8 0%, #F739F1 100%);
+  --borderRadius: 1rem;
+  --headingGlow:
+      0 0 70px rgba(115, 41, 206, 0.4),
+      0 0 40px rgba(115, 41, 206, 0.4);
+  --errorGlow:
+      0 0 70px rgba(239, 22, 25, 1),
+      0 0 40px rgba(239, 22, 25, 1);
+  --buttonGlowPurple: 
+      0 0 60px rgba(115, 41, 206, 0.2),
+      0 0 30px rgba(115, 41, 206, 0.4);
+  --buttonGlowColored:
+      0 0 12px rgba(73, 225, 248, 1),
+      0 0 12px rgba(247, 57, 241, 1);
+  --cardShadowGreen: 0 0 8px rgba(12, 191, 85, 0.2);
+  --cardShadowGreenHover: 0 0 16px rgba(12, 191, 85, 0.4);
+  --cardShadowPurple: 0 0 8px rgba(115, 41, 206, 0.2);
+  --cardShadowPurpleHover: 0 0 16px rgba(115, 41, 206, 0.4);
+  --cardShadowPink: 0 0 8px rgba(247, 57, 241, 0.2);
+  --cardShadowPinkHover: 0 0 16px rgba(247, 57, 241, 0.4);
+  --cardShadowCyan: 0 0 8px rgba(73, 225, 248, 0.2);
+  --cardShadowCyanHover: 0 0 16px rgba(73, 225, 248, 0.4);
+  --cardShadowPurpleStrong: -12px 0 180px rgba(115, 41, 206, 1);
+  --layerBlur: blur(30px);
+  --ringShadowPink: 0 0 20px rgba(247, 57, 241, 0.6);
+  --terminalShadow: 0 0 12px rgba(73, 225, 248, 0.15);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  letter-spacing: 0.03em;
+  background-color: var(--primaryBgColor);
+  text-align: center;
+}
+
+a {
+  color: unset;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.hero-padding {
+  padding: 6rem 2rem;
+}
+
+.section-padding {
+  padding: 5rem 10rem;
+
+}
+
+.footer-padding {
+  padding: 4rem 10rem 3rem 10rem;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.primary-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--purpleColor);
+  color: white;
+  border: none;
+  font-family: var(--primaryText);
+  font-size: 1.125rem;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  border-radius: var(--borderRadius);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.primary-button:hover {
+  background-color: var(--purpleColorHover);
+  transform: scale(1.02);
+  box-shadow: var(--buttonGlowPurple);
+}
+
+.secondary-button {
+  position: relative;
+  z-index: 1;
+  background-color: transparent;
+  color: var(--cyanColor);
+  border: none;
+  font-family: var(--primaryText);
+  font-size: 1.125rem;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  border-radius: var(--borderRadius);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.secondary-button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 3px;
+  background: linear-gradient(to bottom, #49E1F8, #F739F1);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: -1;
+  border-radius: inherit;
+  transition: background 0.3s ease;
+}
+
+.secondary-button:hover {
+  transform: scale(1.02);
+  box-shadow: var(--buttonGlowColored);
+}
+
+.card-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: var(--pinkColor);
+  border: none;
+  font-family: var(--primaryText);
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  border-radius: var(--borderRadius);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease, color 0.3s ease;
+}
+
+.card-button:hover {
+  transform: scale(1.02);
+  background-color: var(--pinkColor);
+  color: white;
+}
+
+
+.body-text {
+  font-family: var(--secondaryText);
+  color: var(--lightGrayColor);
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.nav-text {
+  font-family: var(--primaryText);
+  color: var(--lightGrayColor);
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+
+.label-text {
+  font-family: var(--primaryText);
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.input-text {
+  font-family: var(--secondaryText);
+  color: var(--lightGrayColor);
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+.subheading-text {
+  font-family: var(--secondaryText);
+  color: var(--lightGrayColor);
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.cardmenu-text {
+  font-family: var(--secondaryText);
+  color: white;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.terminal-text {
+  font-family: var(--tertiaryText);
+  color: white;
+  font-size: 0.875rem;
+  line-height: 150%;
+  font-weight: 400;
+}
+
+.boldbody-text {
+  font-family: var(--secondaryText);
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.mediumbody-text {
+  font-family: var(--secondaryText);
+  color: var(--lightGrayColor);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.footer-text {
+  font-family: var(--tertiaryText);
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+}
+
+.h1-text {
+  font-family: var(--primaryText);
+  color: white;
+  font-size: 6rem;
+  text-shadow: var(--headingGlow);
+}
+
+.h2-text {
+  font-family: var(--primaryText);
+  color: white;
+  font-size: 3rem;
+}
+
+.h3-text {
+  font-family: var(--primaryText);
+  color: white;
+  font-size: 2.5rem;
+}
+
+.h4-text {
+  font-family: var(--primaryText);
+  color: var(--cyanColor);
+  font-size: 2rem;
+}
+
+.h5-text {
+  font-family: var(--primaryText);
+  color: white;
+  font-size: 1.5rem;
+}
+
+.h6-text {
+  font-family: var(--primaryText);
+  color: white;
+  font-size: 1.25rem;
+}
+
+.slide-bottom {
+  -webkit-animation: slide-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: slide-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@media screen and (max-width: 900px) {
+  .hero-padding {
+    padding: 5rem 2rem;
+  }
+
+  .section-padding {
+    padding: 4rem 2rem;
+  }
+
+  .footer-padding {
+    padding: 3rem 2rem 2rem 2rem
+  }
+
+  .subheading {
+    font-size: 1.375rem;
+  }
+
+  .h1-text {
+    font-size: 5rem;
+  }
+
+  .h2-text {
+    font-size: 2.5rem;
+  }
+
+  .h3-text {
+    font-size: 2rem;
+  }
+
+  .h4-text {
+    font-size: 1.5rem;
+  }
+
+  .h5-text {
+    font-size: 1.25rem;
+  }
+
+
+  .primary-button,
+  .secondary-button,
+  .tertiary-button {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .hero-padding {
+    padding: 4rem 1rem;
+  }
+
+  .section-padding {
+    padding: 3rem 1rem;
+  }
+
+  .footer-padding {
+    padding: 2rem 1rem 1.5rem 1rem;
+  }
+
+  .body-text {
+    font-size: 0.875rem;
+  }
+
+  .nav-text {
+    font-size: 1rem;
+  }
+
+  .label-text {
+    font-size: 0.75rem;
+  }
+
+  .input-text {
+    font-size: 0.75rem;
+  }
+
+  .subheading-text {
+    font-size: 1.125rem;
+  }
+
+  .cardmenu-text {
+    font-size: 1rem;
+  }
+
+  .terminal-text {
+    font-size: 0.75rem;
+  }
+
+  .boldbody-text {
+    font-size: 0.875rem;
+  }
+
+  .mediumbody-text {
+    font-size: 0.875rem;
+  }
+
+  .footer-text {
+    font-size: 0.75rem;
+  }
+
+  .h1-text {
+    font-size: 4rem;
+  }
+
+  .h2-text {
+    font-size: 2rem;
+  }
+
+  .h3-text {
+    font-size: 1.5rem;
+  }
+
+  .h4-text {
+    font-size: 1.25rem;
+  }
+
+  .h5-text {
+    font-size: 1.125rem;
+  }
+
+  .h6-text {
+    font-size: 1rem;
+  }
+
+  .card-button {
+    font-size: 0.75rem;
+  }
+}
+
+@-webkit-keyframes slide-bottom {
+  0% {
+    -webkit-transform: translateY(-25%);
+    transform: translateY(-25%);
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-bottom {
+  0% {
+    -webkit-transform: translateY(-25%);
+    transform: translateY(-25%);
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
