@@ -1,0 +1,46 @@
+.logs {
+    flex-direction: column;
+    width: 100%;
+}
+
+.logs-heading {
+    margin-bottom: 3rem;
+}
+
+.logs-heading h2 {
+    margin-bottom: 2rem;
+}
+
+.logs-content {
+    flex-direction: column;
+    width: 100%;
+    gap: 3rem;
+}
+
+@media screen and (max-width: 900px) {
+    .logs-heading {
+        margin-bottom: 2rem;
+    }
+
+    .logs-heading h2 {
+        margin-bottom: 1.5rem;
+    }
+
+    .logs-content {
+        gap: 2rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .logs-heading {
+        margin-bottom: 1.75rem;
+    }
+
+    .logs-heading h2 {
+        margin-bottom: 1.25rem;
+    }
+
+    .logs-content {
+        gap: 1.5rem;
+    }
+}
